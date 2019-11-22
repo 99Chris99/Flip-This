@@ -1,5 +1,6 @@
 // API ----------
-const BASE_URL = "http://localhost:3000/"
+//const BASE_URL = "http://localhost:3000/"
+const BASE_URL = "https://flip-this.herokuapp.com/"
 const USERS_URL = BASE_URL + "users/"
 const FLIPBOOKS_URL = BASE_URL + "flipbooks/"
 
