@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="index.css">
+    <title>Flip This</title>
+</head>
+<body>
+    <div id="header">
+        <div id="logo-container">
+            <canvas id="logo-canvas" width="120" height="80"></canvas>
+        </div>
+        <div id="display-users-flipbooks">
+                <button id="show-flipbooks">Show My FlipBooks</button>
+        </div>
+        <h1 id="main-title">Flip-This!</h1>
+        <div id="login-or-signup">
+            <button id="login-btn" class="blue login">Login</button>
+            <button id="signup-btn" class="signup">Signup</button>
+            <h4 id="logged-in">Logged in: <span id="username"></span></h4>
+        </div>
+    </div>
+    <div id="flipbook-list-modal" class='modal'>
+        <div class="modal-content">
+            <h3>My Flipbooks</h3>
+            <div id="flipbooks-list-container">
+    
+            </div>
+        </div>
+    </div>
+    <br>
+    <div id="forms-container">
+        <form id="create-flipbook-form">
+            <h4>Create a Flipbook Below</h4>
+            <label for="title">Enter a title:</label> <br>
+            <input type="text" name="title" id="flipbook-title">
+            <br>
+            <label for="page-count">How many pages?</label>
+            <br>
+            <select name="page-count" id="page-count" class="select-css">
+                <option value="5">5 pages</option>
+                <option value="10">10 pages</option>
+                <option value="15">15 pages</option>
+                <option value="20">20 pages</option>
+                <option value="25">25 pages</option>
+                <option value="30">30 pages</option>
+            </select>
+            <br>
+            <button type="submit" class="blue">Create Book</button>
+        </form>
+
+        <form id="login-form">
+            <h4>Login Below</h4>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username">
+            <br>
+            <button type='submit' class="blue">Login</button>
+            <button class="cancel-form orange">Cancel</button>
+        </form>
+
+        <form id="signup-form">
+                <h4>Signup Below</h4>
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username">
+                <br>
+                <button type='submit' class="blue">Signup</button>
+                <button class="cancel-form orange" class="orange">Cancel</button>
+        </form>
+    </div>
+    <div id="button-holder">
+        <div id="notepad-background">
+                <div class="animation-config" id="left-buttons">
+                <div class="button-heading">Navigate</div>
+                        <button id='first-page'>First Page</button>
+                        <button id="next-page">Next Page</button>
+                        <button id="back-page">Back Page</button>                        
+                        <button id="draw-save">Draw</button>  
+                        <button id="play">Play</button>
+                        <button id="new-flipbook">New Flipbook</button>
+                        <button id="save">Save Flipbook</button>
+                </div>
+        <div id="main-container">
+            <div id="pages-and-layers">
+                <div id='page-num-div'>Page: <span id='page-num'></span></div>
+                <div id='flip-title-div'><span id='flip-title'></span></div>
+                <div id='layer-num-div'>Layer: <span id='layer-num'></span></div>
+            </div>
+            <div id="canvas-area">
+            </div>
+        </div>
+        <div class="animation-config" id="right-buttons">
+                <div class="button-heading">Animate</div>
+                <button id="static-background">Set Background</button>
+                <button id="animate-blink">Blink</button>
+                <button id="animate-shake">Shake</button>
+                <button id="animate-move-right">Move Right</button>
+                <button id="animate-move-left">Move Left</button>
+                <button id="animate-move-up">Move Up</button>
+                <button id="animate-move-down">Move Down</button>
+            </div>
+    </div>
+    <div class="animation-config" id="bottom-buttons">
+            <button id="new-layer" class="blue">Add New Layer</button>
+    </div>
+
+
+    </div>
+    <footer>
+        <!-- <h2>Lets Flip-This!...</h2> -->
+        <div class="instructions" id="top-instructions">
+        <ol>
+            <li><p>Draw your background, then hit <b>‘Set Background’</b>
+                <br><small>  - this will remain throughout</small></p></li>
+            <li><p>Hit <b>‘Add New Layer’</b>
+                <br><small>   - each thing you want animating needs to be on a separate layer</small></p></li>
+            <li><p>Draw more, then hit an <b>Animate</b>
+                <br><small>   - animations will auto generate your layer on every page</small></p></li>
+            </ol>
+        </div>
+        <div class="instructions" id="bottom-instructions">
+                <ol start="4">
+                        <li><p>Hit <b>‘Add New Layer’</b> again
+                            <br><small>  - remeber to do this before adding something new!</small></p></li>
+                        <li><p>Drawn and <b>Animate</b> something else
+                            <br><small>   - there's loads of animations to choose</small></p></li>
+                        <li><p>Press <b>'Play'</b> to watch it! 
+                            <br><small>   - use the navigate controls to manually flip pages and save</small></p></li>
+                        </ol>
+                    </div>
+
+        </div>
+
+
+    </footer>
+    <script src="logo.js" defer></script>
+    <script src="index.js" defer></script>
+</body>
+</html>
